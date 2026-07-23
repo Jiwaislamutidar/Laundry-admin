@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+.login-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f3f6f9 0%, #e8edf5 100%);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 68, 140, 0.06), 0 4px 12px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-header h2 {
+  color: #00448c;
+  font-size: 30px;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.login-header p {
+  color: #6c757d;
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.input-group input {
+  padding: 14px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  color: #1a202c;
+  background-color: #f8fafc;
+  transition: all 0.25s ease;
+}
+
+.input-group input:focus {
+  border-color: #00448c;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 68, 140, 0.12);
+}
+
+.error-alert {
+  background-color: #fff5f5;
+  color: #c53030;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #fed7d7;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: shake 0.4s ease-in-out;
+}
+
+.btn-login {
+  background-color: #00448c;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0, 68, 140, 0.2);
+}
+
+.btn-login:hover {
+  background-color: #005bb7;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 68, 140, 0.25);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+/* --- PERBAIKAN RESPONSIF UNTUK IPHONE XR / MOBILE --- */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px;
+    align-items: center; /* Kartu kembali ke tengah secara vertikal */
+    background: linear-gradient(135deg, #f3f6f9 0%, #e8edf5 100%); /* Gradasi tetap penuh */
+  }
+
+  .login-card {
+    padding: 32px 24px;
+    border-radius: 16px; /* Sudut melengkung yang rapi di HP */
+    box-shadow: 0 8px 24px rgba(0, 68, 140, 0.05); /* Shadow tipis agar pop-out */
+  }
+
+  .login-header h2 {
+    font-size: 26px;
+  }
+}
